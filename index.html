@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            font-size: 12px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./component/list/index.css">
+</head>
+<body>
+    
+    <div id="app">
+        <list :list="list"></list>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="./component/list/index.js"></script>
+    
+    <script>
+        const LIST = ['选项A', '选项B', '选项C', '选项D'];
+
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                list: LIST
+            }
+        });
+    </script>
+</body>
+</html>
